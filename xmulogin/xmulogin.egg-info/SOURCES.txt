@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+xmulogin/__init__.py
+xmulogin/core.py
+xmulogin.egg-info/PKG-INFO
+xmulogin.egg-info/SOURCES.txt
+xmulogin.egg-info/dependency_links.txt
+xmulogin.egg-info/requires.txt
+xmulogin.egg-info/top_level.txt

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmulogin"
+version = "1.0.0"
+description = "厦门大学统一身份认证登录SDK"
+readme = "README.md"
+authors = [{name = "XMU Student", email = "your.email@example.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["xmu", "xiamen", "university", "login", "authentication", "厦门大学"]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+    "pycryptodome>=3.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/xmulogin"
+"Bug Tracker" = "https://github.com/yourusername/xmulogin/issues"
+
