@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="XMU Rollcall Helper 的 Safari 快捷指令加密桥接页面。"
+    />
+    <meta name="theme-color" content="#f5f8ff" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>XMU Rollcall Helper</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="helper-card" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">X</div>
+        <p class="eyebrow">厦门大学课堂点名助手</p>
+        <h1 id="page-title">XMU Rollcall Helper</h1>
+        <p class="privacy-note">
+          密码加密在本机浏览器内完成，不会上传或保存。
+        </p>
+
+        <a
+          class="launch-button"
+          href="shortcuts://run-shortcut?name=XMU%20Rollcall%20Helper"
+          aria-label="运行 XMU Rollcall Helper 快捷指令"
+        >
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M11.5 8.2v15.6L24 16 11.5 8.2Z" />
+          </svg>
+        </a>
+        <p class="launch-label">运行快捷指令</p>
+
+        <div class="ready-state" role="status" aria-live="polite">
+          <span class="ready-dot" aria-hidden="true"></span>
+          <span id="ready-text">正在准备加密模块…</span>
+        </div>
+      </section>
+    </main>
+
+    <form
+      id="shortcut-bridge"
+      data-state="idle"
+      data-encoding="base64"
+      hidden
+      aria-hidden="true"
+    >
+      <input id="shortcut-password" name="password" autocomplete="off" />
+      <input id="shortcut-salt" name="salt" autocomplete="off" />
+      <button id="shortcut-encrypt" type="button">Encrypt</button>
+      <output id="shortcut-output" name="result"></output>
+    </form>
+  </body>
+</html>
