@@ -76,7 +76,6 @@
   const saltInput = document.getElementById("shortcut-salt");
   const encryptButton = document.getElementById("shortcut-encrypt");
   const output = document.getElementById("shortcut-output");
-  const readyText = document.getElementById("ready-text");
 
   function setBridgeResult(state, value) {
     output.value = value;
@@ -117,9 +116,7 @@
 
   if (window.isSecureContext && window.crypto?.subtle) {
     document.documentElement.dataset.ready = "true";
-    readyText.textContent = "加密模块已就绪";
   } else {
     document.documentElement.dataset.ready = "false";
-    readyText.textContent = "当前环境不支持安全加密";
   }
 })();
